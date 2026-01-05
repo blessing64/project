@@ -62,8 +62,264 @@ a:hover {
     font-size: 20px;
     padding: 40px;
     font-weight: 500;
+
 }
 
+  .home-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+    gap: 40px;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text_content {
+    flex: 1;
+    animation: fadeInLeft 1s ease;
+}
+
+.role-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.9);
+    color: #f5576c;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.95em;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.text_content h2 {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.text_content p {
+    font-size: 20px;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+.cta-button {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.95);
+    color: #f5576c;
+    font-size: 1.05em;
+    font-weight: 600;
+    padding: 15px 35px;
+    border-radius: 30px;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+    background: white;
+}
+
+.cta-button a {
+    color: #f5576c;
+    text-decoration: none;
+}
+
+.cta-button:hover a {
+    color: #f5576c;
+}
+
+.image-section {
+    flex-shrink: 0;
+    animation: fadeInRight 1s ease;
+}
+
+.image-section img {
+    width: 350px;
+    height: 400px;
+    border-radius: 300px;
+    object-fit: cover;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.image-section img:hover {
+    transform: scale(1.05);
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ========================================
+   HOME PAGE RESPONSIVE STYLES
+   (Matching About Page Layout)
+   ======================================== */
+
+/* Large Tablets and Small Desktops (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+    .home-container {
+        gap: 30px;
+        padding: 0 30px;
+    }
+
+    .image-section img {
+        width: 300px;
+        height: 350px;
+    }
+
+    .text_content h2 {
+        font-size: 2.2em;
+    }
+
+    .text_content p {
+        font-size: 18px;
+    }
+}
+
+/* Tablets (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .home-container {
+        flex-direction: column;
+        margin-top: 40px;
+        gap: 30px;
+        padding: 0 20px;
+    }
+
+    .text_content {
+        order: 2;
+        text-align: center;
+    }
+
+    .text_content h2 {
+        font-size: 2em;
+        margin-bottom: 15px;
+    }
+
+    .text_content p {
+        font-size: 16px;
+    }
+
+    .role-badge {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+
+    .cta-button {
+        font-size: 1em;
+        padding: 12px 28px;
+    }
+
+    .image-section {
+        order: 1;
+    }
+
+    .image-section img {
+        width: 280px;
+        height: 320px;
+        border-radius: 50%;
+    }
+}
+
+/* Mobile Devices (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    .home-container {
+        margin-top: 30px;
+        gap: 20px;
+        padding: 0 15px;
+    }
+
+    .text_content h2 {
+        font-size: 1.6em;
+        margin-bottom: 10px;
+    }
+
+    .text_content p {
+        font-size: 15px;
+        padding: 15px 10px;
+        line-height: 1.6;
+    }
+
+    .role-badge {
+        font-size: 0.85em;
+        padding: 8px 15px;
+        margin-bottom: 15px;
+    }
+
+    .cta-button {
+        font-size: 0.95em;
+        padding: 12px 25px;
+        width: auto;
+    }
+
+    .image-section img {
+        width: 220px;
+        height: 260px;
+        border-radius: 50%;
+    }
+}
+
+/* Very Small Devices (max-width: 360px) */
+@media screen and (max-width: 360px) {
+    .home-container {
+        margin-top: 25px;
+        gap: 15px;
+    }
+
+    .text_content h2 {
+        font-size: 1.4em;
+    }
+
+    .text_content p {
+        font-size: 14px;
+        padding: 12px 8px;
+    }
+
+    .role-badge {
+        font-size: 0.8em;
+        padding: 7px 12px;
+    }
+
+    .cta-button {
+        font-size: 0.9em;
+        padding: 11px 22px;
+    }
+
+    .image-section img {
+        width: 200px;
+        height: 240px;
+    }
+}
 /* Skills Page Styles */
 .container {
     max-width: 1000px;
